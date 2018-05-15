@@ -10,3 +10,44 @@
 // O/P:19
 // Eg3) Array Elements - 1,6,4,7,9
 // O/P:10
+
+import java.io.*;
+import java.util.*;
+public class nine
+{
+    public static void main(String args[])
+    {
+
+        int[] a = {1,6,4,7,9};
+        int sum = 0;
+        int sum_all = 0;
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==6)
+            {
+                    sum+=a[i];
+                    int count = i+1;
+                    while((count<a.length)&& (a[count]!=7) )
+                    {
+                        sum+=a[count];
+                        count++;
+                    }
+                    if((count<a.length) && a[count]==7)
+                    {
+                        sum = 0;
+                    }
+                    else if((count<a.length)) // adding 7
+                    {
+                        sum+=a[count];
+                    }
+                    i = count;
+            }
+            else
+            {
+                sum_all += a[i];
+            }
+        }
+        sum_all += sum;
+        System.out.println(sum_all);
+    }
+}

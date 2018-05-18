@@ -8,6 +8,7 @@ public class fifteen
     {
         Scanner scan = new Scanner(System.in);
         int sum = 0;
+        /*
         String s = scan.next();
         for(int i=0;i<s.length();i++)
         {
@@ -15,7 +16,16 @@ public class fifteen
             sum+= Character.getNumericValue(s.charAt(i));
         }
         System.out.println("Sum:"+sum);
+        */
+        int n = scan.nextInt();
+        while(n>0)
+        {
+            sum += n%10;
+            n = n/10;
+        }
+        System.out.println(sum);
+
     }
 }
 // Input: 1234
-// Output: 20
+// Output: 10

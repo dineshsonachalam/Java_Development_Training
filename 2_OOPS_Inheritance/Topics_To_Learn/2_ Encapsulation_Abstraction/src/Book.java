@@ -28,19 +28,19 @@ class Author
 {
 	private String name;
 	private String email;
-	private String gender; // 'm' or 'f'
+	char  gender; // 'm' or 'f'
 	/*
 	 One constructor to initialize the name, email and gender with the given values. 
 	 */
 	/*Parametrized constructor*/
-	public Author(String name,String email,String gender)
+	public Author(String name,String email,char gender)
 	{
-		this.setName(name);
+		this.name = name;
 		this.email = email;
 		this.gender = gender;
 		/*this keyword is a reference variable refers to the current object*/
 	}
-	public String getGender()
+	public char getGender()
 	{
 		return gender;
 	}
@@ -98,7 +98,7 @@ public class Book
 	public static void main(String args[])
 	{
 		
-		Author obj = new Author("Napolean Hill", "napolean@gmail.com", "m");
+		Author obj = new Author("Napolean Hill", "napolean@gmail.com", 'm');
 		Book obj_2 = new Book("Think and grow rich",obj.getName());
 		obj_2.setPrice(10);
 		obj_2.setQtyInStock(6);
@@ -118,4 +118,14 @@ public class Book
 	
 	
 }
+/*
+ 	Output:
+ 	Book Name:Think and grow rich
+	Price:10.0$
+	Quantity in Stock:6
+	---------------------------------------------
+	Author:Napolean Hill
+	Email:napolean@gmail.com
+	Gender:m
 
+ */

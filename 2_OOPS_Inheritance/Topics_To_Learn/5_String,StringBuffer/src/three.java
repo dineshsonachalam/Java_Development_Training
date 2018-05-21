@@ -30,8 +30,6 @@ public class three
 		three obj = new three();
 		String output = obj.n_copies(s);
 		System.out.println(output);
-		
-		
 	}
 }
 /*

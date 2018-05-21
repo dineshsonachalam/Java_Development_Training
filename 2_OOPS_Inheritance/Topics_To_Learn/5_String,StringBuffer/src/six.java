@@ -14,8 +14,13 @@ public class six
 			long_word+=a;
 			short_word+=b;
 		}
+		else
+		{
+			long_word+=b;
+			short_word+=a;
+		}
 		String op = (short_word+long_word+short_word);
-		System.out.println(short_word);
+		
 		return op;
 	}
 	public static void main(String args[])
@@ -24,7 +29,9 @@ public class six
 		String b = "hello";
 		six  obj = new six();
 		String op = obj.transform(a,b);
-		System.out.println(op.length());
-		System.out.println("Hello world");
+		System.out.println(op);
 	}
 }
+/*
+ Output: hihellohi
+ */
